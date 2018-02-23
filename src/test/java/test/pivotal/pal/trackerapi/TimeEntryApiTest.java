@@ -53,7 +53,7 @@ public class TimeEntryApiTest {
         ResponseEntity<String> listResponse = restTemplate.getForEntity("/time-entries", String.class);
 
 
-        assertThat(listResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
+                assertThat(listResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
 
         DocumentContext listJson = parse(listResponse.getBody());
 
