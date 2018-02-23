@@ -24,8 +24,10 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     }
 
     @Override
-    public TimeEntry update(long getId,TimeEntry obj) {
-        return null;
+    public TimeEntry update(long getId,TimeEntry timeEntry) {
+        dblist.replace(getId,timeEntry);
+        timeEntry.setId(getId);
+        return timeEntry;
     }
 
     @Override
