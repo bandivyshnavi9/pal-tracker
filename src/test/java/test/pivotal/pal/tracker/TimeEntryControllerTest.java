@@ -27,9 +27,11 @@ public class TimeEntryControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        timeEntryRepository = mock(TimeEntryRepository.class);
         counter = mock(CounterService.class);
         gauge = mock(GaugeService.class);
+
+        timeEntryRepository = mock(TimeEntryRepository.class);
+
         controller = new TimeEntryController(timeEntryRepository, counter, gauge);
     }
 

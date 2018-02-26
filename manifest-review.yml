@@ -5,6 +5,8 @@ applications:
   host: sv-pal-tracker-review
   services:
     - tracker-database
+  env:
+    SECURITY_FORCE_HTTPS: true
 # random-route: true
 #  env:
 #    WELCOME_MESSAGE: Hello from Cloud Foundry
